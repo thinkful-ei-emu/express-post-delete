@@ -17,7 +17,19 @@ app.use(helmet());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.send('Hello, world!\n');
+});
+
+app.post('/', (req, res) => {
+  res.send('POST request received.\n');
+});
+
+app.get('/card', (req, res) => {
+  // return list of cards
+});
+
+app.post('/card', (req, res) => {
+  // create new card
 });
 
 app.use(function errorHandler(error, req, res, next) {
